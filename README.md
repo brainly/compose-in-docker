@@ -10,6 +10,33 @@ instead of installing it on your docker host.
 - `brainly/docker-compose:edge` - latest built version from `master` branch of
   https://github.com/docker/compose/
 
+## Usage
+
+With `docker-machine`:
+
+```bash
+docker run \
+  -v $DOCKER_CERT_PATH:/certs \
+  -e DOCKER_TLS_VERIFY="$DOCKER_TLS_VERIFY" \
+  -e DOCKER_HOST="$DOCKER_HOST" \
+  -e DOCKER_CERT_PATH="/certs" \
+  -v $(pwd):$(pwd) \
+  -w $(pwd) \
+  brainly/docker-compose \
+  docker-compose -p yourprojectname up
+```
+
+With just `docker`:
+
+```bash
+docker run \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $(pwd):$(pwd) \
+  -w $(pwd) \
+  brainly/docker-compose \
+  docker-compose -p yourprojectname up
+```
+
 ## Development
 
 After cloning the repo, to build an image, you can use:
