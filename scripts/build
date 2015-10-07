@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker build -t brainly/docker-compose:$1 versions/$1
