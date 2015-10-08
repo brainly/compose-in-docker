@@ -5,9 +5,9 @@ instead of installing it on your docker host.
 
 ## Tags
 
-- `brainly/docker-compose:1.4`
-- `brainly/docker-compose:latest` - latest released version of `docker-compose`
-- `brainly/docker-compose:edge` - latest built version from `master` branch of
+- `brainly/compose-in-docker:1.4`
+- `brainly/compose-in-docker:latest` - latest released version of `docker-compose`
+- `brainly/compose-in-docker:edge` - latest built version from `master` branch of
   https://github.com/docker/compose/
 
 ## Usage
@@ -22,7 +22,7 @@ docker run \
   -e DOCKER_CERT_PATH="/certs" \
   -v $(pwd):$(pwd) \
   -w $(pwd) \
-  brainly/docker-compose \
+  brainly/compose-in-docker \
   docker-compose -p yourprojectname up
 ```
 
@@ -33,7 +33,7 @@ docker run \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v $(pwd):$(pwd) \
   -w $(pwd) \
-  brainly/docker-compose \
+  brainly/compose-in-docker \
   docker-compose -p yourprojectname up
 ```
 
