@@ -52,7 +52,7 @@ contains its own `Dockerfile`.
 
 ## Contributing
 
-1. Fork it ( https://github.com/waterlink/active_record.cr/fork )
+1. Fork it ( https://github.com/brainly/compose-in-docker/fork )
 1. Create your feature branch (git checkout -b my-new-feature)
 1. Commit your changes (git commit -am 'Add some feature')
 1. Push to the branch (git push origin my-new-feature)
